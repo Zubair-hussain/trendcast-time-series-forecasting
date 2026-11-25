@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trendcast"
+version = "1.0.0"
+description = "An original, lightweight AI trend-forecasting engine with momentum scoring."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "ZH" }]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.23",
+    "scikit-learn>=1.1",
+    "matplotlib>=3.6",
+    "pillow>=9.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+trendcast = "trendcast.cli:main"
+
+[tool.setuptools]
+packages = ["trendcast"]
